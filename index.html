@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noren — a product studio for the in-between</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #EFE7D8;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #0F1830;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #EFE7D8;
+  }
+  .bar-top, .bar-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #0F1830;
+  }
+  .bar-top { border-bottom: 1.5px solid #0F1830; }
+  .bar-bottom { border-top: 1.5px solid #0F1830; padding: 20px 48px; font-size: 10px; }
+
+  .masthead {
+    padding: 60px 48px 40px;
+    text-align: center;
+    border-bottom: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .wordmark {
+    font-size: 140px;
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    color: #0F1830;
+  }
+  .wordmark .dot {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #8B5A1A;
+    margin-left: 6px;
+    vertical-align: 14px;
+  }
+  .strapline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #0F1830;
+    margin-top: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    border-bottom: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .col-left {
+    padding: 56px 48px;
+    border-right: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .col-right {
+    padding: 56px 48px;
+    background: rgba(15, 24, 48, 0.04);
+  }
+  .eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8B5A1A;
+    margin-bottom: 28px;
+  }
+  .col-left h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  .col-left h2 em { font-style: italic; }
+  .col-left p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .dropcap {
+    font-size: 64px;
+    float: left;
+    line-height: 0.85;
+    padding: 8px 12px 0 0;
+    color: #0F1830;
+  }
+
+  .who-item {
+    border-top: 0.5px solid rgba(15, 24, 48, 0.3);
+    padding: 20px 0;
+  }
+  .who-item:last-child { border-bottom: 0.5px solid rgba(15, 24, 48, 0.3); }
+  .who-roman {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .who-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .manifesto {
+    padding: 80px 48px;
+    text-align: center;
+    border-bottom: 1.5px solid #0F1830;
+    position: relative;
+  }
+  .manifesto::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #8B5A1A;
+  }
+  .manifesto p {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 400;
+    max-width: 720px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .manifesto .signature {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 32px;
+    font-style: normal;
+  }
+
+  .cta {
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .cta h3 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+  }
+  .cta-buttons {
+    display: inline-flex;
+    gap: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+  }
+  .btn {
+    padding: 16px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: inline-block;
+  }
+  .btn-primary {
+    background: #0F1830;
+    color: #EFE7D8;
+  }
+  .btn-secondary {
+    color: #0F1830;
+    border: 0.5px solid #0F1830;
+  }
+
+  @media (max-width: 768px) {
+    .wordmark { font-size: 80px; }
+    .wordmark .dot { width: 14px; height: 14px; vertical-align: 8px; }
+    .columns { grid-template-columns: 1fr; }
+    .col-left { border-right: none; border-bottom: 0.5px solid rgba(15, 24, 48, 0.3); }
+    .col-left h2 { font-size: 28px; }
+    .manifesto p { font-size: 22px; }
+    .cta h3 { font-size: 26px; }
+    .cta-buttons { flex-direction: column; }
+    .bar-top, .bar-bottom, .masthead, .col-left, .col-right, .manifesto, .cta {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="bar-top">
+    <div>Vol. 01 · Sydney</div>
+    <div>Est. 2026</div>
+  </div>
+
+  <div class="masthead">
+    <div class="wordmark">Noren<span class="dot"></span></div>
+    <div class="strapline">a product studio for the in-between</div>
+  </div>
+
+  <div class="columns">
+    <div class="col-left">
+      <div class="eyebrow">— No. 01</div>
+      <h2>You've vibe-coded an MVP. Now you need it to <em>actually work.</em></h2>
+      <p><span class="dropcap">N</span>oren works with non-technical founders who've proven the idea with Lovable, v0, or a friend's weekend hack — and with technical founders who need a second pair of senior hands. We rebuild what's brittle, ship what's missing, and hand back software you can actually scale on.</p>
+      <p>Fixed scope. Fixed fee. No equity, no retainers.</p>
+    </div>
+
+    <div class="col-right">
+      <div class="eyebrow">— Who we work with</div>
+      <div class="who-item">
+        <div class="who-roman">i.</div>
+        <div class="who-text">Non-technical founders with a working MVP and paying users.</div>
+      </div>
+      <div class="who-item">
+        <div class="who-roman">ii.</div>
+        <div class="who-text">Solo technical founders who need senior backup to ship faster.</div>
+      </div>
+      <div class="who-item">
+        <div class="who-roman">iii.</div>
+        <div class="who-text">Operators with deep industry knowledge and no idea where to start.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="manifesto">
+    <p>A noren is the cloth panel hung at a Japanese shop entrance — open for business, but you still have to part the curtain to come in.</p>
+    <div class="signature">— on the name</div>
+  </div>
+
+  <div class="cta">
+    <div class="eyebrow" style="color: #8B5A1A;">— Come in</div>
+    <h3>Part the curtain.</h3>
+    <div class="cta-buttons">
+      <a href="https://cal.com" class="btn btn-primary">Book a call</a>
+      <a href="mailto:hello@noren.studio" class="btn btn-secondary">hello@noren.studio</a>
+    </div>
+  </div>
+
+  <div class="bar-bottom">
+    <div>© Noren 2026</div>
+    <div>Sydney · Worldwide</div>
+  </div>
+
+</div>
+
+</body>
+</html>
