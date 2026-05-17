@@ -458,24 +458,51 @@
       font-size: 10px;
       letter-spacing: 0.2em;
     }
-    .section { padding: 56px 24px; }
-    .eyebrow-center { margin-bottom: 18px; }
-    .section-heading { font-size: 26px; margin-bottom: 36px; line-height: 1.18; }
+    .section { padding: 72px 24px; border-bottom-width: 1px; }
+    .eyebrow-center {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      margin-bottom: 20px;
+    }
+    .section-heading {
+      font-size: 32px;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+    }
 
     .fix-grid, .process-grid, .eng-grid {
       grid-template-columns: 1fr;
       border-top: none;
     }
     .fix-item, .process-item, .eng-item {
-      padding: 22px 0;
+      padding: 32px 0;
       border-right: none;
-      border-top: 0.5px solid rgba(15, 24, 48, 0.18);
+      border-top: 0.5px solid rgba(15, 24, 48, 0.25);
+    }
+    .fix-item:first-child, .process-item:first-child, .eng-item:first-child {
+      padding-top: 28px;
     }
     .fix-item:last-child, .process-item:last-child, .eng-item:last-child {
-      border-bottom: none;
+      padding-bottom: 4px;
     }
-    .process-num { font-size: 28px; margin-bottom: 10px; }
-    .process-title, .fix-title, .eng-title { font-size: 18px; }
+
+    .fix-roman {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .fix-title { font-size: 20px; margin-bottom: 10px; }
+    .fix-text { font-size: 15px; line-height: 1.6; }
+
+    .process-num {
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+    .process-title { font-size: 21px; margin-bottom: 12px; }
+    .process-text { font-size: 15px; line-height: 1.6; }
+
+    .eng-title { font-size: 20px; margin-bottom: 12px; }
+    .eng-item p { font-size: 15px; line-height: 1.6; }
 
     .ba-grid { grid-template-columns: 1fr; gap: 20px; }
     .ba-col { padding: 24px 22px; }
@@ -503,10 +530,14 @@
     .wordmark { font-size: 64px; }
     .wordmark .dot { width: 10px; height: 10px; margin-left: 5px; }
     .masthead { padding: 40px 20px 28px; }
-    .section { padding: 48px 20px; }
+    .section { padding: 60px 20px; }
     .col-left, .col-right { padding: 36px 20px; }
     .manifesto, .cta { padding: 52px 20px; }
-    .section-heading { font-size: 23px; margin-bottom: 28px; }
+    .section-heading { font-size: 27px; margin-bottom: 40px; }
+    .fix-item, .process-item, .eng-item { padding: 26px 0; }
+    .fix-roman { font-size: 20px; margin-bottom: 12px; }
+    .fix-title, .process-title, .eng-title { font-size: 19px; }
+    .process-num { font-size: 32px; margin-bottom: 14px; }
     .ba-col { padding: 22px 20px; }
     .ba-list li { font-size: 14px; padding-left: 30px; }
     .founder-card { padding: 20px; gap: 16px; }
