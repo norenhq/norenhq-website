@@ -570,6 +570,13 @@ body {
   font-style: italic;
   font-size: 16px;
   color: rgba(15, 24, 48, 0.75);
+  line-height: 1.55;
+}
+.form-success p a {
+  color: #8B5A1A;
+  text-decoration: none;
+  border-bottom: 0.5px solid #8B5A1A;
+  padding-bottom: 1px;
 }
 .cta-call {
   margin-top: 40px;
