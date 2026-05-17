@@ -45,11 +45,11 @@
   }
   .wordmark .dot {
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     background: #8B5A1A;
-    margin-left: 6px;
-    vertical-align: 14px;
+    margin-left: 10px;
+    vertical-align: baseline;
   }
   .strapline {
     font-family: Georgia, serif;
@@ -185,19 +185,333 @@
     border: 0.5px solid #0F1830;
   }
 
+  .section {
+    padding: 72px 48px;
+    border-bottom: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .eyebrow-center {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8B5A1A;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .section-heading {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 56px;
+  }
+  .section-heading em { font-style: italic; }
+
+  .fix-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .fix-item {
+    padding: 28px 28px 0 28px;
+    border-right: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .fix-item:first-child { padding-left: 0; }
+  .fix-item:last-child { padding-right: 0; border-right: none; }
+  .fix-roman {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #8B5A1A;
+    margin-bottom: 12px;
+  }
+  .fix-title {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  .fix-text {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(15, 24, 48, 0.78);
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .process-item {
+    padding: 32px 28px 0 28px;
+    border-right: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .process-item:first-child { padding-left: 0; }
+  .process-item:last-child { padding-right: 0; border-right: none; }
+  .process-num {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 38px;
+    color: #8B5A1A;
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+  .process-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .process-text {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(15, 24, 48, 0.8);
+  }
+
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .ba-col {
+    padding: 40px 36px;
+    position: relative;
+  }
+  .ba-before {
+    background: #EFE7D8;
+    color: #0F1830;
+    border: 1.5px solid #0F1830;
+    box-shadow: 8px 8px 0 0 rgba(15, 24, 48, 0.18);
+  }
+  .ba-after {
+    background: #EFE7D8;
+    color: #0F1830;
+    border: 1.5px solid #8B5A1A;
+    box-shadow: 8px 8px 0 0 rgba(139, 90, 26, 0.18);
+  }
+  .ba-label {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.7;
+  }
+  .ba-before .ba-label { color: #0F1830; opacity: 0.7; }
+  .ba-after .ba-label { color: #8B5A1A; opacity: 1; }
+  .ba-headline {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+  .ba-list { list-style: none; }
+  .ba-list li {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.35;
+    padding: 14px 0 14px 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+  }
+  .ba-before .ba-list li,
+  .ba-after .ba-list li {
+    border-bottom: 0.5px solid rgba(15, 24, 48, 0.15);
+  }
+  .ba-list li:last-child { border-bottom: none; }
+  .ba-list li::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .ba-before .ba-list li::before {
+    content: '\00d7';
+    background: #0F1830;
+    color: #EFE7D8;
+    font-size: 16px;
+  }
+  .ba-after .ba-list li::before {
+    content: '\2713';
+    background: #8B5A1A;
+    color: #EFE7D8;
+    font-size: 11px;
+  }
+
+  .eng-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .eng-item {
+    padding: 32px 32px 8px 32px;
+    border-right: 0.5px solid rgba(15, 24, 48, 0.3);
+  }
+  .eng-item:first-child { padding-left: 0; }
+  .eng-item:last-child { padding-right: 0; border-right: none; }
+  .eng-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .eng-item p {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(15, 24, 48, 0.8);
+  }
+
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .founder-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    padding: 28px;
+    border: 0.5px solid rgba(15, 24, 48, 0.3);
+    background: rgba(15, 24, 48, 0.03);
+  }
+  .founder-mark {
+    width: 56px;
+    height: 56px;
+    background: #8B5A1A;
+    color: #EFE7D8;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .founder-body { flex: 1; }
+  .founder-name {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .founder-role {
+    font-style: italic;
+    color: rgba(15, 24, 48, 0.7);
+    font-size: 16px;
+  }
+  .founder-body p {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    color: rgba(15, 24, 48, 0.85);
+  }
+  .founder-link {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #0F1830;
+    text-decoration: none;
+    border-bottom: 0.5px solid #0F1830;
+    padding-bottom: 2px;
+  }
+
   @media (max-width: 768px) {
     .wordmark { font-size: 80px; }
-    .wordmark .dot { width: 14px; height: 14px; vertical-align: 8px; }
+    .wordmark .dot { width: 12px; height: 12px; vertical-align: baseline; margin-left: 6px; }
+    .masthead { padding: 48px 24px 32px; }
+    .strapline { font-size: 16px; margin-top: 18px; }
     .columns { grid-template-columns: 1fr; }
     .col-left { border-right: none; border-bottom: 0.5px solid rgba(15, 24, 48, 0.3); }
-    .col-left h2 { font-size: 28px; }
-    .manifesto p { font-size: 22px; }
+    .col-left { padding: 44px 24px; }
+    .col-right { padding: 44px 24px; }
+    .col-left h2 { font-size: 26px; }
+    .col-left p { font-size: 16px; }
+    .dropcap { font-size: 52px; padding: 6px 10px 0 0; }
+    .who-text { font-size: 16px; }
+    .manifesto { padding: 60px 24px; }
+    .manifesto p { font-size: 20px; }
+    .cta { padding: 60px 24px; }
     .cta h3 { font-size: 26px; }
-    .cta-buttons { flex-direction: column; }
-    .bar-top, .bar-bottom, .masthead, .col-left, .col-right, .manifesto, .cta {
-      padding-left: 24px;
-      padding-right: 24px;
+    .cta-buttons { flex-direction: column; width: 100%; }
+    .btn { width: 100%; text-align: center; }
+    .bar-top, .bar-bottom {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
     }
+    .section { padding: 56px 24px; }
+    .eyebrow-center { margin-bottom: 18px; }
+    .section-heading { font-size: 26px; margin-bottom: 36px; line-height: 1.18; }
+
+    .fix-grid, .process-grid, .eng-grid {
+      grid-template-columns: 1fr;
+      border-top: none;
+    }
+    .fix-item, .process-item, .eng-item {
+      padding: 22px 0;
+      border-right: none;
+      border-top: 0.5px solid rgba(15, 24, 48, 0.18);
+    }
+    .fix-item:last-child, .process-item:last-child, .eng-item:last-child {
+      border-bottom: none;
+    }
+    .process-num { font-size: 28px; margin-bottom: 10px; }
+    .process-title, .fix-title, .eng-title { font-size: 18px; }
+
+    .ba-grid { grid-template-columns: 1fr; gap: 20px; }
+    .ba-col { padding: 24px 22px; }
+    .ba-headline { font-size: 20px; margin-bottom: 18px; }
+    .ba-list li {
+      font-size: 15px;
+      padding: 11px 0 11px 32px;
+      min-height: 28px;
+    }
+    .ba-list li::before { width: 20px; height: 20px; }
+    .ba-before .ba-list li::before { font-size: 14px; }
+    .ba-after .ba-list li::before { font-size: 10px; }
+    .ba-before { box-shadow: 4px 4px 0 0 rgba(15, 24, 48, 0.18); }
+    .ba-after { box-shadow: 4px 4px 0 0 rgba(139, 90, 26, 0.18); }
+
+    .founder-grid { grid-template-columns: 1fr; gap: 16px; }
+    .founder-card { flex-direction: row; gap: 20px; padding: 22px; align-items: flex-start; }
+    .founder-mark { width: 44px; height: 44px; font-size: 22px; }
+    .founder-name { font-size: 17px; }
+    .founder-role { display: block; font-size: 14px; margin-top: 2px; }
+    .founder-body p { font-size: 14px; }
+  }
+
+  @media (max-width: 420px) {
+    .wordmark { font-size: 64px; }
+    .wordmark .dot { width: 10px; height: 10px; margin-left: 5px; }
+    .masthead { padding: 40px 20px 28px; }
+    .section { padding: 48px 20px; }
+    .col-left, .col-right { padding: 36px 20px; }
+    .manifesto, .cta { padding: 52px 20px; }
+    .section-heading { font-size: 23px; margin-bottom: 28px; }
+    .ba-col { padding: 22px 20px; }
+    .ba-list li { font-size: 14px; padding-left: 30px; }
+    .founder-card { padding: 20px; gap: 16px; }
+    .founder-mark { width: 40px; height: 40px; font-size: 20px; }
+    .bar-top, .bar-bottom { padding-left: 16px; padding-right: 16px; }
   }
 </style>
 </head>
@@ -236,6 +550,132 @@
       <div class="who-item">
         <div class="who-roman">iii.</div>
         <div class="who-text">Operators with deep industry knowledge and no idea where to start.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow-center">— The fix</div>
+    <h2 class="section-heading">From brittle prototype to <em>production code.</em></h2>
+    <div class="fix-grid">
+      <div class="fix-item">
+        <div class="fix-roman">i.</div>
+        <div class="fix-title">Codebase cleanup</div>
+        <div class="fix-text">Refactor, restructure, remove dead code. Make it readable again.</div>
+      </div>
+      <div class="fix-item">
+        <div class="fix-roman">ii.</div>
+        <div class="fix-title">Architecture &amp; database</div>
+        <div class="fix-text">Schema, queries, migrations, indexes — a stable server layer.</div>
+      </div>
+      <div class="fix-item">
+        <div class="fix-roman">iii.</div>
+        <div class="fix-title">Auth, payments &amp; APIs</div>
+        <div class="fix-text">Production-grade implementations of the boring critical parts.</div>
+      </div>
+      <div class="fix-item">
+        <div class="fix-roman">iv.</div>
+        <div class="fix-title">Tests, docs &amp; deploys</div>
+        <div class="fix-text">The scaffolding that lets the next engineer ship without fear.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow-center">— The process</div>
+    <h2 class="section-heading">Four moves, start to handover.</h2>
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-num">I.</div>
+        <div class="process-title">Audit</div>
+        <div class="process-text">We read every line of your MVP. Map what's there, what's missing, what's brittle.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">II.</div>
+        <div class="process-title">Plan</div>
+        <div class="process-text">Fixed scope, fixed fee, clear timeline. You see exactly what changes before we touch the code.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">III.</div>
+        <div class="process-title">Rebuild &amp; ship</div>
+        <div class="process-text">We clean the codebase, fix the weak parts, and build what's missing.</div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">IV.</div>
+        <div class="process-title">Handover</div>
+        <div class="process-text">Documented, tested, deployable code — and a product your team can keep building on.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow-center">— Before / after</div>
+    <h2 class="section-heading">From a hidden MVP to a product you can <em>run on.</em></h2>
+    <div class="ba-grid">
+      <div class="ba-col ba-before">
+        <div class="ba-label">Before Noren</div>
+        <div class="ba-headline">Brittle and hidden.</div>
+        <ul class="ba-list">
+          <li>Messy AI-generated code</li>
+          <li>No clear structure</li>
+          <li>Bugs hidden everywhere</li>
+          <li>Hard to scale</li>
+          <li>Hard to hand over</li>
+          <li>Future engineers get blocked</li>
+        </ul>
+      </div>
+      <div class="ba-col ba-after">
+        <div class="ba-label">After Noren</div>
+        <div class="ba-headline">Clean and shippable.</div>
+        <ul class="ba-list">
+          <li>Clean, documented codebase</li>
+          <li>Stable product foundation</li>
+          <li>Better architecture</li>
+          <li>New features shipped</li>
+          <li>Easier onboarding</li>
+          <li>Ready for real users</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow-center">— Engagement</div>
+    <h2 class="section-heading">Fixed scope. Fixed fee. <em>No equity, no retainers.</em></h2>
+    <div class="eng-grid">
+      <div class="eng-item">
+        <div class="eng-title">Clear scope</div>
+        <p>Exact deliverables agreed before we start. No moving targets, no creeping wishlist.</p>
+      </div>
+      <div class="eng-item">
+        <div class="eng-title">Predictable cost</div>
+        <p>One fixed project price. No hourly billing, no surprise invoices at month-end.</p>
+      </div>
+      <div class="eng-item">
+        <div class="eng-title">Production-ready handover</div>
+        <p>Clean code, documentation, and a product your team can keep shipping on.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow-center">— Who builds Noren</div>
+    <div class="founder-grid">
+      <div class="founder-card">
+        <div class="founder-mark">F</div>
+        <div class="founder-body">
+          <div class="founder-name">Fedor Kriuk <span class="founder-role">— Founder &amp; engineer</span></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Engineer with a background in production systems and AI infrastructure. Placeholder bio — replace with real background, prior companies, and what you ship.</p>
+          <a href="#" class="founder-link">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="founder-card">
+        <div class="founder-mark">S</div>
+        <div class="founder-body">
+          <div class="founder-name">Smayan Gupta <span class="founder-role">— Founder &amp; engineer</span></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Engineer with a background in production systems and AI infrastructure. Placeholder bio — replace with real background, prior companies, and what you ship.</p>
+          <a href="#" class="founder-link">LinkedIn ↗</a>
+        </div>
       </div>
     </div>
   </div>
