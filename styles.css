@@ -423,6 +423,32 @@ body {
   margin-bottom: 14px;
   color: rgba(15, 24, 48, 0.85);
 }
+.founder-creds {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.founder-creds li {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(15, 24, 48, 0.85);
+  position: relative;
+  padding: 4px 0 4px 14px;
+}
+.founder-creds li::before {
+  content: '·';
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  color: #8B5A1A;
+  font-weight: 700;
+  font-size: 16px;
+}
+.founder-creds li em {
+  font-style: italic;
+  color: #8B5A1A;
+}
 .founder-link {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 11px;
@@ -639,6 +665,8 @@ body {
   .founder-name { font-size: 17px; }
   .founder-role { display: block; font-size: 14px; margin-top: 2px; }
   .founder-body p { font-size: 14px; }
+  .founder-creds li { font-size: 13px; padding: 3px 0 3px 12px; }
+  .founder-creds li::before { font-size: 14px; top: 2px; }
 
   .form { padding: 26px 20px; border-radius: 3px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
